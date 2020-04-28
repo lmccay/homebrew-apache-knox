@@ -28,9 +28,9 @@ class ApacheKnoxShell < Formula
 
       # Some binaries have really generic names (like `test`) and most seem to be
       # too special-purpose to be permanently available via PATH.
-      #%w[gateway.sh ldap.sh].each do |script|
-      #  (bin/script).write_env_script "#{libexec}/bin/#{script}", Language::Java.java_home_env("1.8")
-      #end
+      %w[gateway.sh ldap.sh].each do |script|
+        (bin/script).write_env_script "#{libexec}/bin/#{script}", Language::Java.java_home_env("1.8")
+      end
     end
   end
 
